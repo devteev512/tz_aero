@@ -63,7 +63,7 @@ class CannApiOperator(BaseOperator):
                 logging.info(record)
                 try:
                     copy.write_row((record['id'], record['uid'], record['strain'], record['cannabinoid_abbreviation'], record['cannabinoid'], 
-                                record['terpene'], record['medica_use'], record['health_benefit'], record['category'], record['type'],  
+                                record['terpene'], record['medical_use'], record['health_benefit'], record['category'], record['type'],  
                                 record['buzzword'],  record['brand']))
                 except KeyError as e:
                     logging.warning(f"Got a KeyError with key {e}")
